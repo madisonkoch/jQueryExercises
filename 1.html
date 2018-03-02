@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic JavaScript Dump</title>
+  <style>
+      .someStyles{
+          color: tomato;
+      }
+  </style>
+</head>
+  <body>
+
+    <!-- We created an empty HTML div. Note that there is no content inside. -->
+    <div id="empty-div"></div>
+      <!--Google jQuery.cdn, select top link, find the 3.3.1, click uncompressed, copy code, and paste it above any and all other script tags but inside the div-->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        
+        <script>
+            //document.getElementById('empty-div').innerHTML='some text';
+            
+            //const target = document.getElementById('empty-div');
+
+            //const heading = document.createElement('h1');
+            //heading.innerHTML = 'some heading';
+            //target.appendChild(heading);
+
+           $('#empty-div').append("<h1>Some Heading</h1>")  /*<-- is a jQuery API*/
+           $('h1').css("color","tomato"); /*Add Style with jQuery!*/
+             
+
+            //heading.classList.add('someStyles');
+
+            //Do the 3 step process or....
+                /*1.Create element*/
+                    //const newDiv = document.createElement('div');
+                /*2.Add content to element*/
+                    //newDiv.innerHTML = 'some more stuff';
+                /*3.Append element to the DOM*/ 
+                    //target.appendChild(newDiv);
+                        /*taret refers to where it goes and we specified it would go the empty div in line 12*/
+                        /*appendChild makes it a child of the empty-div element*/
+            //Do it with jQuery
+                $('#empty-div').append("<p>some more stuff</p>");
+
+        </script>
+  </body>
+</html>
